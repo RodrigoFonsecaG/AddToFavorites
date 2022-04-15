@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header'
 import Home from './Components/Home';
+import LoginForm from './Components/Login/LoginForm'
+import RegisterForm from './Components/Login/RegisterForm';
 
 
 const App = () => {
@@ -11,7 +13,9 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="login" element={<LoginForm />} />
+          <Route path="register" element={<RegisterForm />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -7,29 +7,25 @@ import { Link } from 'react-router-dom';
 import Movie from './Movie';
 
 const AllMovies = () => {
-
   const slideWrapper = React.useRef();
 
+  function handlePrev() {
+    slideWrapper.current.scrollLeft -= slideWrapper.current.offsetWidth;
+  }
 
-    function handlePrev() {
-        slideWrapper.current.scrollLeft -= slideWrapper.current.offsetWidth;
-    }
-
-    function handleNext() {
-                console.log(slideWrapper.current.offsetWidth);
-                console.log(slideWrapper.current.offsetHeight);
-                console.log(slideWrapper.current.clientWidth);
-                console.log(slideWrapper.current.scrollLeft);
-                console.log(slideWrapper.current.scrolLeft);
-                console.log(slideWrapper.current.scroll());
-                console.log(slideWrapper.current.getBoundingClientRect());
-                console.log(slideWrapper.current.offsetLeft);
-        console.log(slideWrapper.current.scrollWidth);
-        console.log('--------------------------')
-        slideWrapper.current.scrollLeft += slideWrapper.current.offsetWidth;
-    }
-    
-
+  function handleNext() {
+    // console.log(slideWrapper.current.offsetWidth);
+    // console.log(slideWrapper.current.offsetHeight);
+    // console.log(slideWrapper.current.clientWidth);
+    // console.log(slideWrapper.current.scrollLeft);
+    // console.log(slideWrapper.current.scrolLeft);
+    // console.log(slideWrapper.current.scroll());
+    // console.log(slideWrapper.current.getBoundingClientRect());
+    // console.log(slideWrapper.current.offsetLeft);
+    console.log(slideWrapper.current.scrollWidth);
+    console.log('--------------------------');
+    slideWrapper.current.scrollLeft += slideWrapper.current.offsetWidth;
+  }
 
   return (
     <section className={styles.allMovies}>
