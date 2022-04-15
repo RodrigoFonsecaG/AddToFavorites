@@ -1,0 +1,44 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.title a:hover {
+   transform: scale(1.2);
+}
+
+.title a > svg {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 9px;
+}
+
+.allMovies {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.moviesList {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.movie img {
+  border-radius: 5px;
+  max-width: 15rem;
+  height: 21rem;
+  object-fit: cover;
+}
+
+@keyframes bounce {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(2);
+  }
+}
