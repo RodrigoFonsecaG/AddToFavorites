@@ -1,0 +1,6 @@
+.movie img {
+  border-radius: 5px;
+  max-width: 15rem;
+  height: 21rem;
+  object-fit: cover;
+}

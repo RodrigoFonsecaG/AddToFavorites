@@ -1,9 +1,36 @@
 import React from 'react';
 import styles from './AllMovies.module.css';
 import { ReactComponent as Add } from '../../Assets/add.svg';
+import { ReactComponent as Next } from '../../Assets/next.svg';
+import { ReactComponent as Prev } from '../../Assets/prev.svg';
 import { Link } from 'react-router-dom';
+import Movie from './Movie';
 
 const AllMovies = () => {
+
+  const slideWrapper = React.useRef();
+
+
+    function handlePrev() {
+        slideWrapper.current.scrollLeft -= slideWrapper.current.offsetWidth;
+    }
+
+    function handleNext() {
+                console.log(slideWrapper.current.offsetWidth);
+                console.log(slideWrapper.current.offsetHeight);
+                console.log(slideWrapper.current.clientWidth);
+                console.log(slideWrapper.current.scrollLeft);
+                console.log(slideWrapper.current.scrolLeft);
+                console.log(slideWrapper.current.scroll());
+                console.log(slideWrapper.current.getBoundingClientRect());
+                console.log(slideWrapper.current.offsetLeft);
+        console.log(slideWrapper.current.scrollWidth);
+        console.log('--------------------------')
+        slideWrapper.current.scrollLeft += slideWrapper.current.offsetWidth;
+    }
+    
+
+
   return (
     <section className={styles.allMovies}>
       <div className={styles.title}>
@@ -12,31 +39,36 @@ const AllMovies = () => {
           <Add />
         </Link>
       </div>
-      <ul className={styles.moviesList}>
-        <li className={styles.movie}>
-          <img
-            src="https://br.web.img2.acsta.net/pictures/21/12/06/10/52/1598963.jpg"
-            alt=""
-          />
-        </li>
-        <li className={styles.movie}>
-          <img
-            src="https://br.web.img2.acsta.net/pictures/21/12/06/10/52/1598963.jpg"
-            alt=""
-          />
-        </li>
-        <li className={styles.movie}>
-          <img
-            src="https://br.web.img2.acsta.net/pictures/21/12/06/10/52/1598963.jpg"
-            alt=""
-          />
-        </li>
-        <li className={styles.movie}>
-          <img
-            src="https://wallpaperboat.com/wp-content/uploads/2021/12/19/79926/spider-man-no-way-home-12.jpg"
-            alt=""
-          />
-        </li>
+      <div className={styles.commands}>
+        <button onClick={handlePrev}>
+          <Prev />
+        </button>
+        <button onClick={handleNext}>
+          <Next />
+        </button>
+      </div>
+
+      <ul className={styles.moviesList} ref={slideWrapper}>
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie
+          url={
+            'https://image.tmdb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg'
+          }
+        />
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
       </ul>
     </section>
   );
