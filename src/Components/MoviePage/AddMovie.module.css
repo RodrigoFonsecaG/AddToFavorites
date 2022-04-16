@@ -1,0 +1,38 @@
+.addMovie{
+    text-align: center;
+}
+
+.addMovie form button{
+    margin: 2rem auto;
+}
+
+.addMovie form input{
+    width: 80%;
+    height: 5rem;
+    margin-top: 2rem;
+    color: black;
+    padding: 1rem;
+    font-size: 2.4rem;
+}
+
+.movies h2{
+    margin-bottom: 1rem;
+}
+
+.movies button{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+
+.movies ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.movies ul li img{
+    width: 100%;
+    cursor: pointer;
+}
+

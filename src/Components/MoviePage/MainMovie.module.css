@@ -6,8 +6,15 @@
     gap: 1rem;
 }
 
+.mainMovie .title{
+    text-transform: uppercase;
+}
+
 .categories{
-    font-size: 2.4rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    align-items: center;
 }
 
 .imdb{

@@ -3,7 +3,7 @@
   max-width: 600px;
 
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -54,10 +54,17 @@
   padding: 0 10%;
 }
 
+.formFields label{
+    margin-top: 2rem;
+}
+
 .formFields input {
-  margin-bottom: 2rem;
   padding: 0 1rem;
   font-weight: 500;
 
   color: black;
+}
+
+.formFields button{
+  margin-top: 2rem;
 }

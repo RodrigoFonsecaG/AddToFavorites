@@ -1,15 +1,22 @@
 import React from 'react'
 import styles from './Movie.module.css';
 
-const Movie = ({url}) => {
+import Image from '../../Helper/Image';
+import { Link } from 'react-router-dom';
+
+const Movie = ({ url, id }) => {
   return (
     <li className={styles.movie}>
-      <img
-        src={
-          url ? url : 'https://br.web.img2.acsta.net/pictures/21/12/06/10/52/1598963.jpg'
-        }
-        alt=""
-      />
+      <Link to={`/movie/${id}`}>
+        <Image
+          src={
+            url
+              ? url
+              : 'https://via.placeholder.com/650x970.png?text=Imagem-indisponivel'
+          }
+          alt=""
+        />
+      </Link>
     </li>
   );
 }
