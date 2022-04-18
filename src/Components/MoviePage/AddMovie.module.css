@@ -1,38 +1,73 @@
-.addMovie{
-    text-align: center;
+.addMovie {
+  text-align: center;
 }
 
-.addMovie form button{
-    margin: 2rem auto;
+.addMovie h1 {
+  margin-bottom: 2rem;
 }
 
-.addMovie form input{
-    width: 80%;
-    height: 5rem;
-    margin-top: 2rem;
-    color: black;
-    padding: 1rem;
-    font-size: 2.4rem;
+.addMovie form {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0 auto;
+
 }
 
-.movies h2{
-    margin-bottom: 1rem;
+.addMovie form input {
+  width: 80%;
+  height: 5rem;
+  color: black;
+  padding: 1rem;
+  font-size: 2.4rem;
+
+  flex-grow: 2;
+  /* And hide the input's outline, so the form looks like the outline */
+  border: none;
+
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
 }
 
-.movies button{
-    margin: 0 auto;
-    margin-bottom: 2rem;
+.addMovie form input:focus {
+  outline: none;
 }
 
-
-.movies ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+.addMovie form button {
+  height: 5rem;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
 }
 
-.movies ul li img{
-    width: 100%;
-    cursor: pointer;
+.addMovie form p{
+    order: 3;
+    align-self: center;
 }
 
+.movies h2 {
+  margin-bottom: 1rem;
+}
+
+.movies button {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.movies ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.movies ul li img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.commands {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 2rem;
+}
