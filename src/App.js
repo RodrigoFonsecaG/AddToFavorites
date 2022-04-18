@@ -22,7 +22,7 @@ const App = () => {
             <Route
               path="login"
               element={
-                <ProtectedRoute path="/login">
+                <ProtectedRoute needLogin={false}>
                   <LoginForm />
                 </ProtectedRoute>
               }
@@ -30,12 +30,19 @@ const App = () => {
             <Route
               path="register"
               element={
-                <ProtectedRoute path="/register">
+                <ProtectedRoute needLogin={false}>
                   <RegisterForm />
                 </ProtectedRoute>
               }
             />
-            <Route path="add" element={<AddMovie/>}/>
+            <Route
+              path="add"
+              element={
+                <ProtectedRoute needLogin={true}>
+                  <AddMovie />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </UserStorage>
       </BrowserRouter>
