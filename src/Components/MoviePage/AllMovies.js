@@ -29,7 +29,7 @@ const AllMovies = () => {
       async function fetchMovies() {
         JSON.parse(moviesId).map(async (movie, index) => {
           const { json } = await request(
-            `http://api.themoviedb.org/3/movie/${movie}?api_key=aa716269e242781657d73e04e0af3364`
+            `https://api.themoviedb.org/3/movie/${movie}?api_key=aa716269e242781657d73e04e0af3364`
           );
 
           setMoviesImages((prevMovie) => [...prevMovie, json.poster_path]);
