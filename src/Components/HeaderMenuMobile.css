@@ -58,6 +58,8 @@
   width: 100%;
 
   margin-left: 20px;
+
+  height: fit-content !important;
 }
 
 .bm-item-list > div {

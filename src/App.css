@@ -37,6 +37,8 @@ body {
   background-size: cover; /* <------ */
   background-repeat: no-repeat;
   background-position: center center;
+
+  background-color: black;
 }
 
 .content {
@@ -117,6 +119,7 @@ img.selected{
 @media (max-width: 950px) {
   .title {
     font-size: 6rem;
-    max-width: 70%;
+    max-width: 100%;
+ 
   }
 }

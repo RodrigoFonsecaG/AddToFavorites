@@ -28,7 +28,7 @@ const AddMovie = () => {
     setPage(1);
 
     const url = `https://api.themoviedb.org/3/search/movie?api_key=aa716269e242781657d73e04e0af3364&query=${
-      search.value
+      search.value 
     }&language=pt&page=${page || 1}`;
 
     const { json } = await request(url);
