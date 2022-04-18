@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React from 'react';
 
 import styles from './AddMovie.module.css';
 
@@ -21,9 +21,6 @@ const AddMovie = () => {
   const [movies, setMovies] = React.useState(null);
   let [data, setData] = React.useState([]);
   let [page, setPage] = React.useState(1);
-
-  let next = useRef();
-  let prev = useRef();
 
   async function handleSubmit(event, page) {
     event.preventDefault();
@@ -101,7 +98,7 @@ const AddMovie = () => {
       <section className={styles.movies}>
         {movies ? (
           <div className={styles.commands}>
-            <button ref={prev} onClick={() => setPage(page - 1)}>
+            <button onClick={() => setPage(page - 1)}>
               <Prev />
             </button>
             <div className={styles.saveMovie}>
@@ -109,7 +106,7 @@ const AddMovie = () => {
               <button onClick={handleSave}>Salvar</button>
             </div>
 
-            <button ref={next} onClick={() => setPage(page + 1)}>
+            <button onClick={() => setPage(page + 1)}>
               <Next />
             </button>
           </div>

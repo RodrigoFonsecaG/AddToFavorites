@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ReactComponent as Imdb } from '../../Assets/imdb.svg';
 import { ReactComponent as Play } from '../../Assets/play.svg';
 import styles from './MainMovie.module.css';
@@ -21,7 +20,7 @@ const MainMovie = () => {
         const randomMovie = moviesIds[randomNumber];
 
         const { json, response } = await request(
-          `http://api.themoviedb.org/3/movie/${randomMovie}?api_key=aa716269e242781657d73e04e0af3364&language=pt&append_to_response=videos`
+          `https://api.themoviedb.org/3/movie/${randomMovie}?api_key=aa716269e242781657d73e04e0af3364&language=pt&append_to_response=videos`
         );
 
         if (response.ok) {
