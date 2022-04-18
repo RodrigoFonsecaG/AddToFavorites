@@ -25,7 +25,10 @@ const MainMovie = () => {
         );
 
         if (response.ok) {
-          document.body.style.background = `url(https://image.tmdb.org/t/p/original/${json.backdrop_path}) no-repeat center center / cover black`;
+          if (json.backdrop_path) {
+            document.body.style.background = `url(https://image.tmdb.org/t/p/original/${json.backdrop_path}) no-repeat center center / cover black`;
+          }
+          else document.body.style.background = 'black';
         }
 
         setMovie(json);
