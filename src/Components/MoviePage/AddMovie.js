@@ -16,7 +16,7 @@ const AddMovie = () => {
   const navigate = useNavigate();
 
   const [movies, setMovies] = React.useState(null);
-  const [data, setData] = React.useState([]);
+  let [data, setData] = React.useState([]);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -48,7 +48,11 @@ const AddMovie = () => {
     function handleSave() {
         let moviesLocal = JSON.parse(localStorage.getItem('movies'));
 
-        if (moviesLocal) {
+      if (moviesLocal) {
+        
+          // algum filme do data ja estiver no localStorage, retorna apenas os que nao estao presentes no localStorage
+          data = data.filter((val) => !moviesLocal.includes(val));
+
           moviesLocal.push(...data);
           localStorage.setItem('movies', JSON.stringify(moviesLocal));
         }
