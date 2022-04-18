@@ -1,0 +1,101 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 29px;
+  height: 25px;
+  top: 25px;
+  right: 40px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+}
+
+.bm-burger-bars-hover {
+  filter: brightness(90%);
+}
+
+.bm-cross-button{
+      height: 24px;
+  width: 24px;
+}
+
+.bm-cross{
+    background-color: black;
+}
+
+/* Position and sizing of clickable cross button */
+
+.bm-overlay {
+  display: none;
+}
+
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+
+
+  height: fit-content !important;
+
+  background: white;
+  backdrop-filter: blur(4.71178px);
+  padding: 2rem;
+  border: 1px solid black;
+
+  border-radius: 4px;
+}
+
+.bm-menu {
+  height: 100vh !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+
+  margin-left: 20px;
+}
+
+.bm-item-list > div {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  gap: 1px;
+}
+
+.bm-menu-wrap {
+  width: fit-content !important;
+  top: 90px;
+}
+
+div.bm-menu-wrap > div.bm-menu > nav > a {
+  margin-top: 2rem;
+}
+
+.bm-item, .bm-item a{
+    color: black;
+}
+
+.bm-item a::after{
+    content: '';
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: black;
+    margin-top: 1rem;
+}
+
+.bm-item a:first-child{
+    margin-top: 1rem;
+}
+
+.bm-item > svg{
+    fill: black !important;
+}
+

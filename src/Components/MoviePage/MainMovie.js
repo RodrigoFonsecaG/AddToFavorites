@@ -12,14 +12,14 @@ const MainMovie = () => {
 
   React.useEffect(() => {
     async function fetchMovie() {
-      const moviesIds = JSON.parse(localStorage.getItem('movies'));
-      const randomNumber =
-        Math.floor(Math.random() * (moviesIds.length - 1 - 0 + 1)) + 0;
-      const randomMovie = moviesIds[randomNumber];
 
-      console.log(randomNumber);
+      const moviesIds = JSON.parse(localStorage.getItem('movies')) || [634649];
 
-      if (randomMovie) {
+      if (moviesIds) {
+        const randomNumber =
+          Math.floor(Math.random() * (moviesIds.length - 1 - 0 + 1)) + 0;
+        const randomMovie = moviesIds[randomNumber];
+
         const { json, response } = await request(
           `http://api.themoviedb.org/3/movie/${randomMovie}?api_key=aa716269e242781657d73e04e0af3364&language=pt&append_to_response=videos`
         );
@@ -34,7 +34,6 @@ const MainMovie = () => {
     fetchMovie();
   }, [request]);
 
-  console.log(movie);
 
   if (movie)
     return (

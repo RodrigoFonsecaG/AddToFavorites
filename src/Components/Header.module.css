@@ -14,6 +14,7 @@
     font-weight: 400;
 }
 
+
 .header nav .logo > svg{
     width: 3rem;
     height: 3rem;
@@ -26,8 +27,10 @@
 }
 
 .header nav .login{
-    display: flex;
+    display: flex !important;
     gap: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .header nav .login svg{
@@ -35,3 +38,5 @@
     height: 2rem;
     fill: white;
 }
+
+
