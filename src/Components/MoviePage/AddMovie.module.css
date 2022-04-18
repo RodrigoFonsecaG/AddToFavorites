@@ -71,3 +71,10 @@
 
   margin-bottom: 2rem;
 }
+
+@media(max-width: 40rem){
+  .movies ul {
+  grid-template-columns: 1fr 1fr;
+}
+
+}
