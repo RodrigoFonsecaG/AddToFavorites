@@ -11,7 +11,7 @@ const MainInfos = ({movie}) => {
       <p>
         {convertIso(movie.release_date)} | {convertHours(movie.runtime)}
         <img
-          src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${movie.production_countries[0].iso_3166_1}.svg`}
+          src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${movie.production_countries[0].iso_3166_1}.svg`}
           style={{width: '20px', marginLeft: '1rem'}}
           alt={movie.production_countries[0].name}
         />
