@@ -28,7 +28,7 @@ const SingleMovie = () => {
 
   if (data === null) return null;
   return (
-    <div style={styles.singleMovie}>
+    <div className={styles.singleMovie}>
       <MainInfos movie={data} />
       <OthersInfo movie={data}/>
     </div>
