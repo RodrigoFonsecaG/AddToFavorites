@@ -1,14 +1,7 @@
 import React from 'react';
-import HomeMovie from '../Components/MoviePage/HomeMovie';
-
-
-
-
+import HomeMovie from '../Components/Home/HomeMovie';
 
 const Home = () => {
-
-
-
 
   return (
       <HomeMovie/>

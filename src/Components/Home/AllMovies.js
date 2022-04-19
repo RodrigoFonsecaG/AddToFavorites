@@ -4,7 +4,7 @@ import { ReactComponent as Add } from '../../Assets/add.svg';
 import { ReactComponent as Next } from '../../Assets/next.svg';
 import { ReactComponent as Prev } from '../../Assets/prev.svg';
 import { Link } from 'react-router-dom';
-import Movie from './Movie';
+import MoviePoster from './MoviePoster';
 import { UserContext } from '../../Context/userContext';
 import useFetch from '../../Hooks/useFetch';
 
@@ -70,10 +70,10 @@ const AllMovies = () => {
       <ul className={styles.moviesList} ref={slideWrapper}>
         {moviesImages
           ? moviesImages.map((movie, index) => (
-                <Movie
-                  id={moviesIds[index]}
-                  key={moviesIds[index]}
-                  url={`https://image.tmdb.org/t/p/original${movie}`}
+              <MoviePoster
+                id={moviesIds[index]}
+                key={moviesIds[index]}
+                url={movie ? `https://image.tmdb.org/t/p/original${movie}` : 'https://via.placeholder.com/650x970.png?text=Imagem-indisponivel'}
               />
             ))
           : null}

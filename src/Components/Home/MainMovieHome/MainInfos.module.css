@@ -8,6 +8,11 @@
   
 }
 
+.mainMovie p {
+    display: flex;
+    align-items: center;
+}
+
 .mainMovie .title{
     text-transform: uppercase;
 }

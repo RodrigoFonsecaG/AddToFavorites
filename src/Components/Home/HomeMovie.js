@@ -1,5 +1,5 @@
 import React from 'react';
-import MainMovie from './MainMovie';
+import MainMovie from './MainMovieHome/MainMovie.js';
 import AllMovies from './AllMovies';
 import styles from './HomeMovie.module.css';
 

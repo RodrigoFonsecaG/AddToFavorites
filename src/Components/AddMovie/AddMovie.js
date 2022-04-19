@@ -85,7 +85,6 @@ const AddMovie = () => {
     }
   }, [page]);
 
-  console.log(data)
 
 
   return (
