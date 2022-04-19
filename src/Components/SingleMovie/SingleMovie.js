@@ -12,7 +12,7 @@ const SingleMovie = () => {
   React.useEffect(() => {
     async function fetchMovie() {
       const { response, json } = await request(
-        `http://api.themoviedb.org/3/movie/${params.id}?api_key=aa716269e242781657d73e04e0af3364&append_to_response=videos&language=pt-BR`
+        `https://api.themoviedb.org/3/movie/${params.id}?api_key=aa716269e242781657d73e04e0af3364&append_to_response=videos&language=pt-BR`
       );
 
       if (response.ok) {
@@ -28,10 +28,10 @@ const SingleMovie = () => {
 
   if (data === null) return null;
   return (
-    <>
+    <div style={styles.singleMovie}>
       <MainInfos movie={data} />
       <OthersInfo movie={data}/>
-    </>
+    </div>
   );
 };
 
