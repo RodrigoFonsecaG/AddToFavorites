@@ -85,6 +85,7 @@ const AddMovie = () => {
     }
   }, [page]);
 
+  console.log(data)
 
 
   return (
@@ -116,11 +117,12 @@ const AddMovie = () => {
             ? movies.results.map((movie) => (
                 <li
                   key={movie.id}
-                  className={styles.movie}
+                  className={`${styles.movie} selected`}
                   onClick={handleSelect}
                   id={movie.id}
                 >
                   <Image
+                    className={data.includes(movie.id.toString()) ? 'selected' : null}
                     alt={movie.original_title}
                     src={
                       movie.poster_path
