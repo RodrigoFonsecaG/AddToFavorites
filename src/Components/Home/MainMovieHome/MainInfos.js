@@ -10,10 +10,13 @@ const MainInfos = ({movie}) => {
     <section className={styles.mainMovie}>
       <p>
         {convertIso(movie.release_date)} | {convertHours(movie.runtime)}
-        <img className={styles.flag}
-          src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${movie.production_countries[0].iso_3166_1}.svg`}
-          alt={movie.production_countries[0].name}
-        />
+        { movie.production_countries[0].iso_3166_1 &&
+          <img
+            className={styles.flag}
+            src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${movie.production_countries[0].iso_3166_1}.svg`}
+            alt={movie.production_countries[0].name}
+          />
+        }
       </p>
       <h1 className="title">{movie.title}</h1>
       <div className={styles.categories}>
