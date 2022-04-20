@@ -1,10 +1,14 @@
 import React from 'react';
 import HomeMovie from '../Components/Home/HomeMovie';
+import Head from './Head';
 
 const Home = () => {
 
   return (
-      <HomeMovie/>
+    <>
+      <Head title="Home"/>
+      <HomeMovie />
+    </>
   );
 };
 

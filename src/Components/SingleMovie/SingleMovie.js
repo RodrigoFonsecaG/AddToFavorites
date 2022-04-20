@@ -4,6 +4,7 @@ import useFetch from '../../Hooks/useFetch';
 import { useParams } from 'react-router-dom';
 import MainInfos from '../Home/MainMovieHome/MainInfos';
 import OthersInfo from './OthersInfo';
+import Head from '../Head';
 
 const SingleMovie = () => {
   const params = useParams();
@@ -29,8 +30,9 @@ const SingleMovie = () => {
   if (data === null) return null;
   return (
     <div className={styles.singleMovie}>
+      <Head title={data.title} />
       <MainInfos movie={data} />
-      <OthersInfo movie={data}/>
+      <OthersInfo movie={data} />
     </div>
   );
 };

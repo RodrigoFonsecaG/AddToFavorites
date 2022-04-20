@@ -4,10 +4,12 @@ import Input from '../Input';
 import styles from './LoginForm.module.css';
 import './Form.css'
 import {ReactComponent as User} from '../../Assets/user.svg'
+import Head from '../Head';
 
 const LoginForm = () => {
   return (
     <section className="formContainer">
+      <Head title="Login" />
       <section className="form">
         <div className="formIcon">
           <User />
@@ -21,7 +23,7 @@ const LoginForm = () => {
       </section>
 
       <section className={styles.register}>
-        <h1 className='subtitle'>Ainda não possui conta?</h1>
+        <h1 className="subtitle">Ainda não possui conta?</h1>
         <Link to="/register">
           {' '}
           {'>>'} Registre-se aqui {'<<'}

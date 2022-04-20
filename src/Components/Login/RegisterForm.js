@@ -6,6 +6,7 @@ import useForm from '../../Hooks/useForm';
 
 import { UserContext } from '../../Context/userContext';
 import { useNavigate } from 'react-router-dom';
+import Head from '../Head';
 
 const RegisterForm = () => {
 
@@ -38,15 +39,16 @@ const RegisterForm = () => {
 
   return (
     <section className="formContainer">
+      <Head title="Registre-se" />
       <section className="form">
         <div className="formIcon">
           <Register />
         </div>
         <h1 className="subtitle">Registre-se</h1>
         <form className="formFields" onSubmit={handleSubmit}>
-          <Input id="name" label="Nome" type="text" {...name}/>
-          <Input id="email" label="Email" type="email" {...email}/>
-          <Input id="password" label="Senha" type="password" {...password}/>
+          <Input id="name" label="Nome" type="text" {...name} />
+          <Input id="email" label="Email" type="email" {...email} />
+          <Input id="password" label="Senha" type="password" {...password} />
           <button>Registre-se</button>
         </form>
       </section>

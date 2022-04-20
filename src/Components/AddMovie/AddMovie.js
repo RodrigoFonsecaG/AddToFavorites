@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { ReactComponent as Next } from '../../Assets/next.svg';
 import { ReactComponent as Prev } from '../../Assets/prev.svg';
+import Head from '../Head';
 
 const AddMovie = () => {
   const search = useForm();
@@ -89,6 +90,7 @@ const AddMovie = () => {
 
   return (
     <section className={styles.addMovie}>
+      <Head title="Adicionar filme" />
       <h1 className="subtitle">Digite o nome do filme:</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <Input id="search" type="text" {...search} />
@@ -121,7 +123,9 @@ const AddMovie = () => {
                   id={movie.id}
                 >
                   <Image
-                    className={data.includes(movie.id.toString()) ? 'selected' : null}
+                    className={
+                      data.includes(movie.id.toString()) ? 'selected' : null
+                    }
                     alt={movie.original_title}
                     src={
                       movie.poster_path
