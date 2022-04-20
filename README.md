@@ -21,6 +21,10 @@ O site possui sistema de login e registro e permite por meio de uma API buscar f
 <h1>
     <img src="movie.png"
 </h1> 
+    
+<h1 align="center">
+    <img src="mobile.png"
+</h1> 
   
 https://add-to-favorites.vercel.app/
 
