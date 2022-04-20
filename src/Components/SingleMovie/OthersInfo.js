@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonDeleteMovie from './ButtonDeleteMovie';
 import styles from './OthersInfo.module.css';
 
 const OthersInfo = ({movie}) => {
@@ -54,6 +55,7 @@ const OthersInfo = ({movie}) => {
             </div>
           </div>
         )}
+        <ButtonDeleteMovie id={movie.id}/>
       </div>
     </section>
   );

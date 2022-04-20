@@ -5,17 +5,19 @@ import styles from './MainInfos.module.css';
 import { convertHours, convertIso } from '../../../Helper/ConvertDates';
 
 
-const MainInfos = ({movie}) => {
+const MainInfos = ({ movie }) => {
   return (
     <section className={styles.mainMovie}>
       <p>
         {convertIso(movie.release_date)} | {convertHours(movie.runtime)}
-        { movie.production_countries[0].iso_3166_1 &&
+        { movie.production_countries[0] ?
           <img
             className={styles.flag}
             src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${movie.production_countries[0].iso_3166_1}.svg`}
             alt={movie.production_countries[0].name}
           />
+
+          : null
         }
       </p>
       <h1 className="title">{movie.title}</h1>

@@ -29,6 +29,7 @@ h3{
     padding-bottom: 5rem;
 }
 
+
 .production{
     display: flex;
     gap: 2rem;
@@ -45,6 +46,10 @@ h3{
 .production p {
     max-width: 100px;
     text-align: center;
+}
+
+.delete{
+    margin-bottom: 2rem;
 }
 
 @media(max-width: 40rem){
